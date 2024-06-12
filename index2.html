@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Orçamento - Studio Jussara Bomfim</title>
+
+<!-- Fontes do Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #fff; /* Branco */
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.button {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #d4af37; /* Dourado */
+    color: #000; /* Preto */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #f1c40f; /* Amarelo */
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .gallery img {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Estilos para dispositivos móveis em paisagem */
+@media (max-width: 768px) and (orientation: landscape) {
+    .gallery img {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Estilos para dispositivos móveis em retrato */
+@media (max-width: 768px) and (orientation: portrait) {
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos para telas muito pequenas */
+@media (max-width: 480px) {
+    .form-group label,
+    .form-group input,
+    .form-group select,
+    .button {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Formulário de Orçamento</h2>
+    <div class="form-group">
+        <label for="nome">Nome da Cliente:</label>
+        <input type="text" id="nome" required>
+    </div>
+    <div class="form-group">
+        <label for="servico">Serviço de Interesse:</label>
+        <select id="servico" required>
+            <option value="Mechas">Mechas</option>
+            <option value="Alisamento">Alisamento</option>
+            <option value="Corte">Corte</option>
+            <option value="Penteado">Penteado</option>
+            <option value="Trança">Trança</option>
+            <option value="Escova">Escova</option>
+            <option value="Tratamento">Tratamento</option>
+            <option value="Hidratação">Hidratação</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="data">Data desejada:</label>
+        <input type="date" id="data" required>
+    </div>
+    <div class="form-group">
+        <label for="horario">Horário desejado:</label>
+        <input type="time" id="horario" required>
+    </div>
+    <button class="button" onclick="enviarWhatsApp()">Enviar</button>
+</div>
+<!-- JavaScript para formatar e enviar a mensagem via WhatsApp -->
+<script>
+    function enviarWhatsApp() {
+        var nome = document.getElementById('nome').value;
+        var servico = document.getElementById('servico').value;
+        var data = document.getElementById('data').value;
+        var horario = document.getElementById('horario').value;
+    
+        var mensagem = 'Olá, gostaria de fazer um orçamento para o serviço: ' + servico +
+                       ', no nome de: ' + nome +
+                       ', para a data: ' + data +
+                       ', às ' + horario + '.';
+    
+        var whatsapp_url = 'https://wa.me/+5579996299006?text=' + encodeURIComponent(mensagem);
+        window.open(whatsapp_url, '_blank');
+    }
+</script>
+</body>
+</html>

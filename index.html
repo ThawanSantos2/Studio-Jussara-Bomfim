@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Jussara Bomfim</title>
+
+<!-- Font Awesome para ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<!-- Fontes do Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #001;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Preto */
+    color: #d4af37; /* Dourado */
+    padding: 10px 20px;
+}
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+.social-icons a {
+    color: #d4af37; /* Dourado */
+    font-size: 1.5em; /* Tamanho dos ícones */
+}
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+h1 {
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: gold;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 5px solid #d4af37; /* Dourado */
+}
+.button {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffca1d; /* Dourado */
+    color: #000; /* Preto */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: black;
+}
+
+h3 {
+    color: black
+}
+.button:hover {
+    background-color: #f1c40f; /* Amarelo */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+}
+
+.serviços {
+    color: #001;
+}
+
+.mySlides { display: none; }
+img { vertical-align: middle; }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .prev, .next, .text { font-size: 11px }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header h1 {
+        font-size: 1.5em; /* Ajuste o tamanho da fonte para tablets */
+    }
+    .gallery img {
+        width: calc(50% - 10px); /* Duas imagens por linha em tablets */
+    }
+}
+
+/* Estilos para dispositivos móveis em paisagem */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header h1 {
+        margin-bottom: 10px;
+    }
+    .gallery img {
+        width: calc(50% - 10px); /* Duas imagens por linha em dispositivos móveis em paisagem */
+    }
+}
+
+/* Estilos para dispositivos móveis em retrato */
+@media (max-width: 768px) and (orientation: portrait) {
+    .gallery img {
+        width: calc(33.333% - 10px); /* Três imagens por linha em dispositivos móveis em retrato */
+    }
+}
+
+/* Estilos para telas muito pequenas */
+@media (max-width: 480px) {
+    .header, .gallery, .button {
+        padding: 10px;
+    }
+    .header h1 {
+        font-size: 1.2em; /* Tamanho de fonte menor para telas pequenas */
+    }
+    .gallery img {
+        width: 100%; /* Uma imagem por linha em telas muito pequenas */
+    }
+    .button {
+        width: 100%; /* Botão se expande para a largura total em telas muito pequenas */
+    }
+}
+
+</style>
+</head>
+<body>
+    <header>
+<div class="header">
+    <h1>Studio Jussara Bomfim</h1>
+    <div class="social-icons">
+        <a href="https://wa.me/5579996299006" title="Enviar Mensagem no Whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/studiojussarabomfim" title="Ir para o Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+</header>
+<div class="slideshow-container">
+
+    <div class="mySlides">
+      <img src="./carrossel1.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <img src="./carrossel2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <img src="./carrossel3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <img src="./carrossel4.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <img src="./carrossel5.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+</div>
+    <br>
+<section class="serviços">
+<div class="container">
+    <h2>Nossos Serviços</h2>
+
+    <!-- Sessão Mechas -->
+    <div class="service-section">
+        <h3 class="service-title">Mechas</h3>
+        <div class="gallery">
+            <!-- Substitua 'src' pelas imagens dos seus serviços -->
+            <img src="./image0.jpeg" alt="Mechas 1">
+            <img src="./image1.jpeg" alt="Mechas 2">
+            <img src="./image0.jpeg" alt="Mechas 3">
+        </div>
+    </div>
+
+    <!-- Sessão Alisamentos -->
+    <div class="service-section">
+        <h3 class="service-title">Alisamento</h3>
+        <div class="gallery">
+            <!-- Substitua 'src' pelas imagens dos seus serviços -->
+            <img src="caminho_para_sua_imagem_mechas1.jpg" alt="Mechas 1">
+            <img src="caminho_para_sua_imagem_mechas2.jpg" alt="Mechas 2">
+            <img src="caminho_para_sua_imagem_mechas3.jpg" alt="Mechas 3">
+        </div>
+    </div>
+
+    <!-- Sessão Corte -->
+    <div class="service-section">
+        <h3 class="service-title">Corte</h3>
+        <div class="gallery">
+            <!-- Substitua 'src' pelas imagens dos seus serviços -->
+            <img src="caminho_para_sua_imagem_mechas1.jpg" alt="Mechas 1">
+            <img src="caminho_para_sua_imagem_mechas2.jpg" alt="Mechas 2">
+            <img src="caminho_para_sua_imagem_mechas3.jpg" alt="Mechas 3">
+        </div>
+    </div>
+
+    <!-- Sessão Penteado -->
+    <div class="service-section">
+        <h3 class="service-title">Penteado</h3>
+        <div class="gallery">
+            <!-- Substitua 'src' pelas imagens dos seus serviços -->
+            <img src="caminho_para_sua_imagem_mechas1.jpg" alt="Mechas 1">
+            <img src="caminho_para_sua_imagem_mechas2.jpg" alt="Mechas 2">
+            <img src="caminho_para_sua_imagem_mechas3.jpg" alt="Mechas 3">
+        </div>
+    </div>
+
+    <!-- Sessão Tranças -->
+    <div class="service-section">
+        <h3 class="service-title">Tranças</h3>
+        <div class="gallery">
+            <!-- Substitua 'src' pelas imagens dos seus serviços -->
+            <img src="./image2.jpeg" alt="Mechas 1">
+            <img src="./image2.jpeg" alt="Mechas 2">
+            <img src="./image2.jpeg" alt="Mechas 3">
+        </div>
+    </div>
+
+    <a class="button" href="index2.html">Faça o seu orçamento</a>
+</div>
+</section>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+    }
+</script>
+</body>
+</html>
