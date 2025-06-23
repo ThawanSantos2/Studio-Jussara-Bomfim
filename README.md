@@ -29,10 +29,6 @@ O projeto já está configurado com:
 - **InfinityPay**: Sistema de pagamentos via URL
 - **Design responsivo**: Funciona em desktop e mobile
 
-## 📊 Banco de Dados
-
-Execute o arquivo `schema.sql` no seu projeto Supabase para criar todas as tabelas necessárias.
-
 ## 🎨 Funcionalidades
 
 ### Para Clientes
@@ -65,11 +61,6 @@ Execute o arquivo `schema.sql` no seu projeto Supabase para criar todas as tabel
 - **Paleta de cores**: Preto, branco, ouro, dourado, rosa
 - **Layout**: Minimalista e profissional
 - **Responsivo**: Funciona em todos os dispositivos
-
-## 🔐 Acesso Administrativo
-
-- **Usuário**: admin
-- **Senha**: admin123
 
 ## 📞 Contato
 
